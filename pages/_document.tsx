@@ -3,7 +3,8 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 import createEmotionServer from "@emotion/server/create-instance";
 import { cache } from "./_app";
 
-const { extractCritical } = createEmotionServer(cache);
+// const { extractCritical } = createEmotionServer(cache);
+const { extractCritical2 } = createEmotionServer(cache);
 
 export default class MyDocument extends Document {
   render() {
@@ -21,7 +22,11 @@ export default class MyDocument extends Document {
 
 MyDocument.getInitialProps = async (ctx) => {
   const initialProps = await Document.getInitialProps(ctx);
-  const styles = extractCritical(initialProps.html);
+  // const styles = extractCritical(initialProps.html);
+
+  // append only the non global styles
+  const { styles: allStyles } = extractCritical2(initialProps.html)
+  const styles = allStyles[allStyles.length - 1]
 
   return {
     ...initialProps,

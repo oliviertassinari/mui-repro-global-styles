@@ -3,9 +3,9 @@
   "version": "5.0.0",
   "private": true,
   "dependencies": {
-    "@emotion/cache": "latest",
-    "@emotion/react": "latest",
-    "@emotion/server": "latest",
+    "@emotion/cache": "https://pkg.csb.dev/emotion-js/emotion/commit/c39f42a8/@emotion/cache",
+    "@emotion/react": "https://pkg.csb.dev/emotion-js/emotion/commit/c39f42a8/@emotion/react",
+    "@emotion/server": "https://pkg.csb.dev/emotion-js/emotion/commit/c39f42a8/@emotion/server",
     "next": "latest",
     "react": "latest",
     "react-dom": "latest"
