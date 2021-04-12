@@ -16,6 +16,7 @@ export default function MyApp(props: AppProps) {
       <Global
         styles={{
           body: {
+            color: darkmode ? "pink" : "red",
             backgroundColor: darkmode ? "#000" : "#fff",
           },
         }}
